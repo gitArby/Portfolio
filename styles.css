@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d2f5cb; 
+    color: #000;
+}
+
+header {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#portfolio {
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 20px;
+    font-size: 1.2em;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d2f5cb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-section {
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+#info {
+    flex-grow: 2;
+}
+
+#photo img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+nav a {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gallery img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    position: relative; /* Přidáme relativní pozici pro pseudo-element */
+}
+
+nav a::before {
+    content: ''; /* Přidáme obsah pseudo-elementu */
+    position: absolute; /* Nastavíme absolutní pozici */
+    top: 50%; /* Posuneme na střed vertikálně */
+    left: 50%; /* Posuneme na střed horizontálně */
+    transform: translate(-50%, -50%); /* Upravíme polohu načítacího kolečka */
+    border: 4px solid #fff; /* Styly pro vnější kruh načítacího kolečka */
+    border-radius: 50%; /* Uděláme kolečko kulatým */
+    border-top: 4px solid transparent; /* Nastavíme průhledný vrchní okraj pro rotaci kolečka */
+    width: 20px; /* Šířka načítacího kolečka */
+    height: 20px; /* Výška načítacího kolečka */
+    animation: spin 1s linear infinite; /* Přidáme animaci pro otáčení kolečka */
+}
+
+/* Animace pro otáčení kolečka */
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
